@@ -1,6 +1,7 @@
 [build]
 builder = "nixpacks"
+buildCommand = "npm install --ignore-scripts && npm run build"
 
 [deploy]
-startCommand = "npm run dev"
+startCommand = "node -e \"require('tsx').register()\" server.ts"
 restartPolicyType = "on_failure"
