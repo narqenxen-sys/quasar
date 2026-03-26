@@ -1,11 +1,7 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Moon, Sun, User } from 'lucide-react';
+import { ArrowLeft, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useTheme } from '../components/ThemeProvider';
-
 export function SettingsPage() {
-  const { theme, toggleTheme } = useTheme();
   const [username, setUsername] = useState(localStorage.getItem('username') || '');
 
   const handleSave = () => {
@@ -44,27 +40,6 @@ export function SettingsPage() {
                 Save
               </button>
             </div>
-          </div>
-        </section>
-
-        <section className="p-6 rounded-3xl bg-white/5 border border-white/10">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              {theme === 'light' ? <Sun className="text-yellow-500" /> : <Moon className="text-blue-400" />}
-              <div>
-                <h2 className="text-xl font-bold">Appearance</h2>
-                <p className="text-sm opacity-50">{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</p>
-              </div>
-            </div>
-            <button
-              onClick={toggleTheme}
-              className="w-14 h-8 rounded-full bg-white/10 p-1 relative transition-all"
-            >
-              <motion.div
-                animate={{ x: theme === 'light' ? 0 : 24 }}
-                className="w-6 h-6 rounded-full bg-blue-600 shadow-lg"
-              />
-            </button>
           </div>
         </section>
       </div>
