@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.email == "professorabdo007@gmail.com" && request.auth.token.email_verified == true);
+    }
+
+    // Questions collection
+    match /questions/{questionId} {
+      allow read: if true; // Publicly readable for the game
+      allow write: if isAdmin(); // Only admin can modify questions
+    }
+  }
+}

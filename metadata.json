@@ -1,0 +1,5 @@
+{
+  "name": "Quasar",
+  "description": "A real-time multiplayer quiz battle game with multiple categories and game modes.",
+  "requestFramePermissions": []
+}

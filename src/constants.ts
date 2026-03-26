@@ -1,0 +1,18 @@
+export const CATEGORIES = [
+  { id: 'general', name: 'General Knowledge', icon: 'Globe' },
+  { id: 'literature', name: 'Literature', icon: 'Book' },
+  { id: 'mathematics', name: 'Mathematics', icon: 'Calculator' },
+  { id: 'astronomy', name: 'Astronomy', icon: 'Star' },
+  { id: 'geography', name: 'Geography', icon: 'Map' },
+  { id: 'history', name: 'History', icon: 'History' },
+  { id: 'philosophy', name: 'Philosophy', icon: 'Brain' },
+  { id: 'movies', name: 'Movies', icon: 'Film' },
+  { id: 'tv_series', name: 'TV Series', icon: 'Tv' },
+  { id: 'music', name: 'Music', icon: 'Music' },
+  { id: 'video_games', name: 'Video Games', icon: 'Gamepad2' },
+  { id: 'anime', name: 'Anime', icon: 'Smile' },
+  { id: 'sports', name: 'Sports (General)', icon: 'Trophy' },
+  { id: 'football', name: 'Football', icon: 'Activity' },
+  { id: 'animals', name: 'Animals', icon: 'PawPrint' },
+  { id: 'cars', name: 'Cars', icon: 'Car' },
+];

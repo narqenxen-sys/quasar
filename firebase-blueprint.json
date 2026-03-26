@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Question": {
+      "title": "Question",
+      "description": "A quiz question",
+      "type": "object",
+      "properties": {
+        "category": { "type": "string" },
+        "question": { "type": "string" },
+        "options": { "type": "array", "items": { "type": "string" } },
+        "correctAnswer": { "type": "string" }
+      },
+      "required": ["category", "question", "options", "correctAnswer"]
+    }
+  },
+  "firestore": {
+    "/questions/{questionId}": {
+      "schema": "Question",
+      "description": "Quiz questions collection"
+    }
+  }
+}
